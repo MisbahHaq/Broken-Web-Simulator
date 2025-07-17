@@ -1,23 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
 
-  <body>
-    <h1 class="first-heading">First Heading</h1>
-    <p class="first-paragraph">First Paragraph</p>
-    <button class="changeBtn">Click to Change</button>
-    <script>
-      var changeBtn = document.querySelector(".changeBtn");
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
 
-      changeBtn.addEventListener("click", function () {
-        var head = document.querySelector(".first-heading");
+<body>
+  <h1 class="first-heading">First Heading</h1>
+  <p class="first-paragraph">First Paragraph</p>
+  <button class="changeBtn">Click to Change</button>
 
+  <script>
+    var changeBtn = document.querySelector(".changeBtn");
+    var head = document.querySelector(".first-heading");
+    var isChanged = false; // toggle flag
+
+    changeBtn.addEventListener("click", function () {
+      if (!isChanged) {
         head.innerHTML = "New Text";
-      });
-    </script>
-  </body>
+        isChanged = true;
+      } else {
+        head.innerHTML = "First Heading";
+        isChanged = false;
+      }
+    });
+  </script>
+</body>
+
 </html>
