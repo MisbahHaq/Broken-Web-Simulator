@@ -19,6 +19,7 @@
     changeBtn.addEventListener("click", function () {
       if (!isChanged) {
         head.innerHTML = "New Text";
+        head.style.color = 'red';
         isChanged = true;
       } else {
         head.innerHTML = "Click to Change";
