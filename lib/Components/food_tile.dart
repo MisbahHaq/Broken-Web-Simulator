@@ -14,7 +14,10 @@ class FoodTile extends StatelessWidget {
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(20),
       ),
+      margin: const EdgeInsets.only(left: 25),
+      padding: const EdgeInsets.all(25),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Image
           Image.asset(food.imagePath, height: 140),

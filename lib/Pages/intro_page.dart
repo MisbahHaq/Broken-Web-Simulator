@@ -36,7 +36,7 @@ class _IntroPageState extends State<IntroPage> {
             // Icon
             Padding(
               padding: const EdgeInsets.all(50.0),
-              child: Image.asset("assets/sushi4.png"),
+              child: Image.asset("assets/sushi.png"),
             ),
 
             const SizedBox(height: 25),
