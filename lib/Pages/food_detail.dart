@@ -91,7 +91,7 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                 physics: BouncingScrollPhysics(),
                 children: [
                   // Image
-                  Image.asset(widget.food.imagePath, height: 200),
+                  Image.asset(widget.food.imagePath, height: 100),
 
                   const SizedBox(height: 25),
 
