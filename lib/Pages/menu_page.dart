@@ -164,6 +164,7 @@ class _MenuPageState extends State<MenuPage> {
 
           Expanded(
             child: ListView.builder(
+              physics: BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
               itemBuilder:
