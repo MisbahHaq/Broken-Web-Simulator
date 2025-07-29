@@ -18,6 +18,7 @@ class _IntroPageState extends State<IntroPage> {
         padding: const EdgeInsets.all(25.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const SizedBox(height: 25),
 
@@ -60,7 +61,12 @@ class _IntroPageState extends State<IntroPage> {
             const SizedBox(height: 25),
 
             // Get Started Button
-            MyButton(text: "Get Started"),
+            MyButton(
+              text: "Get Started",
+              onTap: () {
+                // go to menu page
+              },
+            ),
           ],
         ),
       ),
