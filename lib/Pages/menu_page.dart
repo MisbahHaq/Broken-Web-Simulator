@@ -24,6 +24,38 @@ class _MenuPageState extends State<MenuPage> {
       rating: "4.9",
     ),
 
+    // Bento
+    Food(
+      name: "Bento",
+      price: "23.00",
+      imagePath: "assets/sushi3.png",
+      rating: "4.3",
+    ),
+
+    // Bento
+    Food(
+      name: "Bento Set 3",
+      price: "49.00",
+      imagePath: "assets/sushi2.png",
+      rating: "4.3",
+    ),
+
+    // Maki Sushi
+    Food(
+      name: "Maki Sushi",
+      price: "27.00",
+      imagePath: "assets/sushi.png",
+      rating: "4.8",
+    ),
+
+    // Maki Sushi
+    Food(
+      name: "Maki Sushi Set 3",
+      price: "50.00",
+      imagePath: "assets/sushi2.png",
+      rating: "4.1",
+    ),
+
     // Tuna
     Food(
       name: "Tuna",
