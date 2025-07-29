@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:maps/Components/Button.dart';
 import 'package:maps/Models/food.dart';
+import 'package:maps/Models/shop.dart';
 import 'package:maps/Theme/colors.dart';
+import 'package:provider/provider.dart';
 
 class FoodDetailsPage extends StatefulWidget {
   final Food food;
@@ -18,7 +21,9 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
   // Decrement Quantity
   void decrementQuantity() {
     setState(() {
-      quantityCount--;
+      if (quantityCount > 0) {
+        quantityCount--;
+      }
     });
   }
 
@@ -27,6 +32,45 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
     setState(() {
       quantityCount++;
     });
+  }
+
+  void addToCart() {
+    // Only Add to Cart if there is something in Cart
+    if (quantityCount > 0) {
+      // Get Access to Shop
+      final shop = context.read<Shop>();
+
+      // Add to Cart
+      shop.addToCart(widget.food, quantityCount);
+
+      // Let User know it was Successful
+      showDialog(
+        context: context,
+        barrierDismissible: false,
+        builder:
+            (context) => AlertDialog(
+              backgroundColor: primaryColor,
+              content: const Text(
+                "Successfully added to Cart",
+                style: TextStyle(color: Colors.white),
+                textAlign: TextAlign.center,
+              ),
+              actions: [
+                // Okay Button
+                IconButton(
+                  onPressed: () {
+                    // Pop once to Remove
+                    Navigator.pop(context);
+
+                    // Pop again to go to Previous screen
+                    Navigator.pop(context);
+                  },
+                  icon: const Icon(Icons.done_all_rounded, color: Colors.white),
+                ),
+              ],
+            ),
+      );
+    }
   }
 
   @override
@@ -171,7 +215,10 @@ class _FoodDetailsPageState extends State<FoodDetailsPage> {
                   ],
                 ),
 
+                const SizedBox(height: 25),
+
                 // Add to Cart Button
+                MyButton(text: "Add to Cart", onTap: addToCart),
               ],
             ),
           ),

@@ -13,7 +13,7 @@ class MyButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: secondaryColor,
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(15),
         ),
         padding: EdgeInsets.all(20),
         child: Row(
@@ -25,7 +25,7 @@ class MyButton extends StatelessWidget {
             const SizedBox(width: 10),
 
             // Icon
-            Icon(Icons.arrow_forward, color: Colors.white),
+            // Icon(Icons.arrow_forward_ios_rounded, color: Colors.white),
           ],
         ),
       ),

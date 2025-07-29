@@ -3,8 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:maps/Components/Button.dart';
 import 'package:maps/Components/food_tile.dart';
 import 'package:maps/Models/food.dart';
+import 'package:maps/Models/shop.dart';
+import 'package:maps/Pages/cart_page.dart';
 import 'package:maps/Pages/food_detail.dart';
 import 'package:maps/Theme/colors.dart';
+import 'package:provider/provider.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -14,59 +17,11 @@ class MenuPage extends StatefulWidget {
 }
 
 class _MenuPageState extends State<MenuPage> {
-  // Food Menu
-  List foodMenu = [
-    // Salmon Sushi
-    Food(
-      name: "Salmon Sushi",
-      price: "21.00",
-      imagePath: "assets/salmon.png",
-      rating: "4.9",
-    ),
-
-    // Bento
-    Food(
-      name: "Bento",
-      price: "23.00",
-      imagePath: "assets/sushi3.png",
-      rating: "4.3",
-    ),
-
-    // Bento
-    Food(
-      name: "Bento Set 3",
-      price: "49.00",
-      imagePath: "assets/sushi5.png",
-      rating: "4.3",
-    ),
-
-    // Maki Sushi
-    Food(
-      name: "Maki Sushi",
-      price: "27.00",
-      imagePath: "assets/sushi.png",
-      rating: "4.8",
-    ),
-
-    // Maki Sushi
-    Food(
-      name: "Maki Sushi Set 3",
-      price: "50.00",
-      imagePath: "assets/sushi2.png",
-      rating: "4.1",
-    ),
-
-    // Tuna
-    Food(
-      name: "Tuna",
-      price: "23.00",
-      imagePath: "assets/tuna.png",
-      rating: "4.3",
-    ),
-  ];
-
   // Navigate to food item details page
   void navigateToFoodDetails(int index) {
+    // Get Shop and Menu
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -77,13 +32,26 @@ class _MenuPageState extends State<MenuPage> {
 
   @override
   Widget build(BuildContext context) {
+    // Get Shop and Menu
+    final shop = context.read<Shop>();
+    final foodMenu = shop.foodMenu;
     return Scaffold(
       backgroundColor: Colors.grey[300],
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        foregroundColor: Colors.grey[800],
         elevation: 0,
-        leading: Icon(Icons.menu, color: Colors.grey[900]),
-        title: Text("Tokyo", style: TextStyle(color: Colors.grey[900])),
+        leading: const Icon(Icons.menu),
+        title: const Text("Tokyo"),
+        actions: [
+          // Cart Button
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/cartpage');
+            },
+            icon: const Icon(Icons.shopping_cart),
+          ),
+        ],
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
