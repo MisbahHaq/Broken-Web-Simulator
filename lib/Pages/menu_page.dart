@@ -153,39 +153,43 @@ class _MenuPageState extends State<MenuPage> {
             ),
             margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
             padding: const EdgeInsets.all(20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Column(
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Image.asset('assets/sushi.png', height: 60),
-
-                    const SizedBox(width: 20),
-
-                    // Name and Price
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
                       children: [
-                        // Name
-                        Text(
-                          "Salmon Eggs",
-                          style: GoogleFonts.poppins(fontSize: 18),
-                        ),
+                        Image.asset('assets/sushi.png', height: 60),
 
-                        const SizedBox(height: 10),
+                        const SizedBox(width: 20),
 
-                        // Price
-                        Text(
-                          "\$21.00",
-                          style: TextStyle(color: Colors.grey[700]),
+                        // Name and Price
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // Name
+                            Text(
+                              "Salmon Eggs",
+                              style: GoogleFonts.poppins(fontSize: 18),
+                            ),
+
+                            const SizedBox(height: 10),
+
+                            // Price
+                            Text(
+                              "\$21.00",
+                              style: TextStyle(color: Colors.grey[700]),
+                            ),
+                          ],
                         ),
                       ],
                     ),
+
+                    // Heart
+                    Icon(Icons.favorite_outline, color: Colors.grey, size: 28),
                   ],
                 ),
-
-                // Heart
-                Icon(Icons.favorite_outline, color: Colors.grey, size: 28),
               ],
             ),
           ),
