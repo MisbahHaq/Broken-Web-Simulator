@@ -133,8 +133,10 @@ class _MenuPageState extends State<MenuPage> {
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
               itemBuilder:
-                  (context, index) =>
-                      FoodTile(food: foodMenu[index], onTap: () {}),
+                  (context, index) => FoodTile(
+                    food: foodMenu[index],
+                    onTap: () => navigateToFoodDetails(index),
+                  ),
             ),
           ),
 
