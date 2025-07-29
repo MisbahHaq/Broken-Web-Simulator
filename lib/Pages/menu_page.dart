@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:maps/Components/Button.dart';
+import 'package:maps/Theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
   const MenuPage({super.key});
@@ -23,13 +25,35 @@ class _MenuPageState extends State<MenuPage> {
         children: [
           // Promo Banner
           Container(
+            decoration: BoxDecoration(
+              color: primaryColor,
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: const EdgeInsets.symmetric(horizontal: 25),
+            padding: const EdgeInsets.all(25),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 // Promo Message
-                Text("Get 32% Promo"),
+                Column(
+                  children: [
+                    Text(
+                      "Get 32% Promo",
+                      style: GoogleFonts.dmSerifDisplay(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
+                    ),
 
-                // Redeem Button
-                MyButton(text: "Redeem", onTap: () {}),
+                    const SizedBox(height: 20),
+
+                    // Redeem Button
+                    MyButton(text: "Redeem", onTap: () {}),
+                  ],
+                ),
+
+                // Image
+                Image.asset('assets/sushi5.png', height: 100),
               ],
             ),
           ),
