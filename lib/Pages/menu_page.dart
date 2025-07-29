@@ -114,7 +114,7 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
-          const SizedBox(height: 10),
+          const SizedBox(height: 15),
 
           Expanded(
             child: ListView.builder(
@@ -124,7 +124,7 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
-          const SizedBox(height: 25),
+          const SizedBox(height: 5),
 
           // Popular Food
           Container(
@@ -150,7 +150,7 @@ class _MenuPageState extends State<MenuPage> {
                         // Name
                         Text(
                           "Salmon Eggs",
-                          style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+                          style: GoogleFonts.poppins(fontSize: 18),
                         ),
 
                         const SizedBox(height: 10),

@@ -14,16 +14,19 @@ class FoodTile extends StatelessWidget {
         color: Colors.grey[100],
         borderRadius: BorderRadius.circular(20),
       ),
-      margin: const EdgeInsets.only(left: 25),
+      margin: const EdgeInsets.only(left: 25, bottom: 125),
       padding: const EdgeInsets.all(25),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 15),
           // Image
           Image.asset(food.imagePath, height: 140),
 
+          SizedBox(height: 10),
+
           // Text
-          Text(food.name, style: GoogleFonts.dmSerifDisplay(fontSize: 20)),
+          Text(food.name, style: GoogleFonts.poppins(fontSize: 20)),
 
           // Price + Rating
           SizedBox(
