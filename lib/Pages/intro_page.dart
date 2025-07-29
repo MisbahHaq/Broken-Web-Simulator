@@ -65,6 +65,7 @@ class _IntroPageState extends State<IntroPage> {
               text: "Get Started",
               onTap: () {
                 // go to menu page
+                Navigator.pushNamed(context, '/menupage');
               },
             ),
           ],
