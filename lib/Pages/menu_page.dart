@@ -22,6 +22,7 @@ class _MenuPageState extends State<MenuPage> {
         title: Text("Tokyo", style: TextStyle(color: Colors.grey[900])),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Promo Banner
           Container(
@@ -66,10 +67,6 @@ class _MenuPageState extends State<MenuPage> {
             padding: const EdgeInsets.symmetric(horizontal: 25),
             child: TextField(
               decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderSide: BorderSide(color: Colors.white),
-                  borderRadius: BorderRadius.circular(20),
-                ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.white),
                   borderRadius: BorderRadius.circular(20),
@@ -82,7 +79,22 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
+          const SizedBox(height: 25),
+
           // Menu List
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: Text(
+              "Food Menu",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.grey[800],
+                fontSize: 18,
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 10),
 
           // Popular Food
         ],
