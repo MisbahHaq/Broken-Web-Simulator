@@ -30,7 +30,7 @@ class _MenuPageState extends State<MenuPage> {
               borderRadius: BorderRadius.circular(20),
             ),
             margin: const EdgeInsets.symmetric(horizontal: 25),
-            padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 40),
+            padding: const EdgeInsets.symmetric(vertical: 25, horizontal: 30),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -59,7 +59,18 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
+          const SizedBox(height: 25),
+
           // Search Bar
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 25),
+            child: TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                focusedBorder: OutlineInputBorder(),
+              ),
+            ),
+          ),
 
           // Menu List
 
