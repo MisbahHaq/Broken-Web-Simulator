@@ -18,6 +18,17 @@ class _MenuPageState extends State<MenuPage> {
         leading: Icon(Icons.menu, color: Colors.grey[900]),
         title: Text("Tokyo", style: TextStyle(color: Colors.grey[900])),
       ),
+      body: Column(
+        children: [
+          // Promo Banner
+
+          // Search Bar
+
+          // Menu List
+
+          // Popular Food
+        ],
+      ),
     );
   }
 }
