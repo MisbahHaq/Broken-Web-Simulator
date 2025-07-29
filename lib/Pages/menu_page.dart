@@ -124,7 +124,39 @@ class _MenuPageState extends State<MenuPage> {
             ),
           ),
 
+          const SizedBox(height: 25),
+
           // Popular Food
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.grey[100],
+              borderRadius: BorderRadius.circular(20),
+            ),
+            margin: const EdgeInsets.only(left: 25, right: 25, bottom: 25),
+            padding: EdgeInsets.all(20),
+            child: Row(
+              children: [
+                Image.asset('assets/sushi.png', height: 60),
+
+                // Name and Price
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // Name
+                    Text(
+                      "Salmon Eggs",
+                      style: GoogleFonts.dmSerifDisplay(fontSize: 18),
+                    ),
+
+                    const SizedBox(height: 10),
+
+                    // Price
+                    Text("\$21.00", style: TextStyle(color: Colors.grey[700])),
+                  ],
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );

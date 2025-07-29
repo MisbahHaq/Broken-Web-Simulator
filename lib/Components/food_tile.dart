@@ -29,13 +29,26 @@ class FoodTile extends StatelessWidget {
           SizedBox(
             width: 160,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 // Price
-                Text("\$" + food.price),
+                Text(
+                  "\$" + food.price,
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.grey[700],
+                  ),
+                ),
 
-                // Rating
-                Icon(Icons.star),
-                Text(food.rating),
+                Row(
+                  children: [
+                    // Rating
+                    Icon(Icons.star, color: Colors.yellow[800]),
+
+                    //Text
+                    Text(food.rating, style: TextStyle(color: Colors.grey)),
+                  ],
+                ),
               ],
             ),
           ),
