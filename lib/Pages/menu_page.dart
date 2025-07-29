@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:maps/Components/Button.dart';
 import 'package:maps/Components/food_tile.dart';
 import 'package:maps/Models/food.dart';
+import 'package:maps/Pages/food_detail.dart';
 import 'package:maps/Theme/colors.dart';
 
 class MenuPage extends StatefulWidget {
@@ -31,6 +32,15 @@ class _MenuPageState extends State<MenuPage> {
       rating: "4.3",
     ),
   ];
+
+  // Navigate to food item details page
+  void navigateToFoodDetails(int index) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => FoodDetailsPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,7 +132,9 @@ class _MenuPageState extends State<MenuPage> {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: foodMenu.length,
-              itemBuilder: (context, index) => FoodTile(food: foodMenu[index]),
+              itemBuilder:
+                  (context, index) =>
+                      FoodTile(food: foodMenu[index], onTap: () {}),
             ),
           ),
 
