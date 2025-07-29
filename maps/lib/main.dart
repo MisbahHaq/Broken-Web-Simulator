@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:maps/Pages/map_page.dart';
+import 'package:maps/Pages/intro_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: MyPage());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: IntroPage());
   }
 }
