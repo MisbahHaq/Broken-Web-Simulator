@@ -36,7 +36,7 @@ class _MenuPageState extends State<MenuPage> {
     Food(
       name: "Bento Set 3",
       price: "49.00",
-      imagePath: "assets/sushi2.png",
+      imagePath: "assets/sushi5.png",
       rating: "4.3",
     ),
 
@@ -69,7 +69,9 @@ class _MenuPageState extends State<MenuPage> {
   void navigateToFoodDetails(int index) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => FoodDetailsPage()),
+      MaterialPageRoute(
+        builder: (context) => FoodDetailsPage(food: foodMenu[index]),
+      ),
     );
   }
 
