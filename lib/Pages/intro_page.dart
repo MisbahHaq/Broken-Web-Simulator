@@ -16,6 +16,7 @@ class _IntroPageState extends State<IntroPage> {
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 25),
 
@@ -31,11 +32,31 @@ class _IntroPageState extends State<IntroPage> {
             const SizedBox(height: 25),
 
             // Icon
-            Image.asset("assets/"),
+            Padding(
+              padding: const EdgeInsets.all(50.0),
+              child: Image.asset("assets/sushi4.png"),
+            ),
+
+            const SizedBox(height: 25),
 
             // Title
+            Text(
+              "THE TASTE OF JAPANESE FOOD",
+              style: GoogleFonts.dmSerifDisplay(
+                fontSize: 44,
+                color: Colors.white,
+              ),
+            ),
+
+            const SizedBox(height: 10),
 
             // Subtitle
+            Text(
+              "Feel the taste of the most popular Japanese food from anywhere and anytime",
+              style: TextStyle(color: Colors.grey[300], height: 2),
+            ),
+
+            const SizedBox(height: 25),
 
             // Get Started Button
           ],
