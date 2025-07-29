@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:maps/Components/Button.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
@@ -59,6 +60,7 @@ class _IntroPageState extends State<IntroPage> {
             const SizedBox(height: 25),
 
             // Get Started Button
+            MyButton(text: "Get Started"),
           ],
         ),
       ),
