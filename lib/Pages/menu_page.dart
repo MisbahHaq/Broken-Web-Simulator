@@ -58,6 +58,7 @@ class _MenuPageState extends State<MenuPage> {
                 // Promo Message
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text(
                       "Get 32% Promo",
@@ -95,6 +96,7 @@ class _MenuPageState extends State<MenuPage> {
                   borderSide: BorderSide(color: Colors.white),
                   borderRadius: BorderRadius.circular(20),
                 ),
+                hintText: "Search Here",
               ),
             ),
           ),

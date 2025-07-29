@@ -28,6 +28,7 @@ class FoodTile extends StatelessWidget {
           // Text
           Text(food.name, style: GoogleFonts.poppins(fontSize: 20)),
 
+          SizedBox(height: 15),
           // Price + Rating
           SizedBox(
             width: 160,
