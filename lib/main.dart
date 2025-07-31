@@ -1,8 +1,8 @@
+import 'package:Sushi/Models/shop.dart';
+import 'package:Sushi/Pages/cart_page.dart';
+import 'package:Sushi/Pages/intro_page.dart';
+import 'package:Sushi/Pages/menu_page.dart';
 import 'package:flutter/material.dart';
-import 'package:maps/Models/shop.dart';
-import 'package:maps/Pages/cart_page.dart';
-import 'package:maps/Pages/intro_page.dart';
-import 'package:maps/Pages/menu_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
