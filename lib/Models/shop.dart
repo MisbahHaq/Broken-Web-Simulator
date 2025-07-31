@@ -1,5 +1,5 @@
+import 'package:Sushi/Models/food.dart';
 import 'package:flutter/material.dart';
-import 'package:maps/Models/food.dart';
 
 class Shop extends ChangeNotifier {
   final List<Food> _foodMenu = [

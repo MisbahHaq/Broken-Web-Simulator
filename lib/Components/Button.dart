@@ -1,5 +1,5 @@
+import 'package:Sushi/Theme/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:maps/Theme/colors.dart';
 
 class MyButton extends StatelessWidget {
   final String text;

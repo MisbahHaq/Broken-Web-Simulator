@@ -1,6 +1,6 @@
+import 'package:Sushi/Models/food.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:maps/Models/food.dart';
 
 class FoodTile extends StatelessWidget {
   final Food food;
