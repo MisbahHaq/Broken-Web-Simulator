@@ -1,9 +1,9 @@
+import 'package:Sushi/Components/Button.dart' show MyButton;
+import 'package:Sushi/Models/food.dart';
+import 'package:Sushi/Models/shop.dart';
+import 'package:Sushi/Theme/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:maps/Components/Button.dart';
-import 'package:maps/Models/food.dart';
-import 'package:maps/Models/shop.dart';
-import 'package:maps/Theme/colors.dart';
 import 'package:provider/provider.dart';
 
 class FoodDetailsPage extends StatefulWidget {

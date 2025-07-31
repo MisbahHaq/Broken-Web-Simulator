@@ -1,6 +1,6 @@
+import 'package:Sushi/Components/Button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:maps/Components/Button.dart';
 
 class IntroPage extends StatefulWidget {
   const IntroPage({super.key});
